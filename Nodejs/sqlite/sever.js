@@ -16,7 +16,7 @@ import { PrismaClient } from "@prisma/client";
 app.use(express.json());
 
 // GET /logs - ดึงข้อมูลทั้งหมดจาก honeypot_logs
-app.get("/logs", async (req, res) => {
+app.get("/cowrie", async (req, res) => {
   try {
     const logs = await prisma.honeypot_logs.findMany();
     res.json(logs);
@@ -29,7 +29,7 @@ app.get("/logs", async (req, res) => {
 });
 
 // ตัวอย่าง POST เพื่อใส่ข้อมูล
-app.post("/logs", async (req, res) => {
+app.post("/cowrie", async (req, res) => {
   const { ip, attack } = req.body;
   try {
     const newLog = await prisma.honeypot_logs.create({
