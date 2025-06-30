@@ -20,6 +20,7 @@
 <h3>DATABASE_URL ความต่าง</h3>
 <p>DATABASE_URL="mysql://root:password@localhost:3306/mydb"</p>
 <p>DATABASE_URL="postgresql://postgres:password@localhost:5432/mydb"</p>
+<p>DATABASE_URL="file:./sqlite.db"</p>
 
 <p>npx prisma migrate dev --name init  รันทุกครั้งที่แก้ schema</p> 
 <p>npm install @prisma/client</p>
@@ -28,3 +29,8 @@
 
 <h3>Authenticate</h3>
 <p>npm install bcryptjs jsonwebtoken</p>
+
+
+<h3>ถ้าจะให้มันอ่านฐานข้อมูลที่มีอยู่แล้ว</h3>
+<p>npx prisma db pull</p>
+<p>npx prisma generate</p>
